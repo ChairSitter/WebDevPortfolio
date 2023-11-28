@@ -5,12 +5,17 @@
 }
 */
 
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --primary-color: black;
     --secondary-color: lightgray; 
     --tertiary-color: rgb(46, 46, 46);
     --quaternary-color: white;
     --button-color: blue;
+    --highlight-color: gold;
 }
 
 body {
@@ -60,6 +65,18 @@ nav {
     margin: 15px;
 }
 
+a {
+    text-decoration: none;
+}
+
+.button:hover {
+    color: var(--button-color);
+}
+
+a.active {
+    color: var(--primary-color);
+}
+
 @media only screen and (max-width : 1100px){
     .button {
         font-size: 1.5rem;
@@ -89,18 +106,6 @@ nav {
     h1 {
         font-size: 3rem;
     }
-}
-
-a {
-    text-decoration: none;
-}
-
-.button:hover {
-    color: var(--button-color);
-}
-
-a.active {
-    color: var(--primary-color);
 }
 
 /*main section*/
@@ -147,11 +152,9 @@ h3 {
     margin-right: 30px;
 }
 
-@media only screen and (max-width: 800px){
-    #about {
-        display: block;
-        text-align: center;
-    }
+#bryan {
+    max-height: 450px;
+    border-radius: 20px;
 }
 
 #description {
@@ -164,17 +167,12 @@ h3 {
 }
 
 @media only screen and (max-width: 800px){
-    #description {
-        margin: 5px;
-        padding: 10px;
-        font-size: 1.5rem;
-    }
+    #about {
+        display: block;
+        text-align: center;
+    }    
 }
 
-#bryan {
-    max-height: 450px;
-    border-radius: 20px;
-}
 
 @media only screen and (max-width: 1050px) and (min-width: 800px){
     #description {
@@ -209,6 +207,7 @@ h3 {
 .proj-title {
     text-decoration: underline;
     font-size: 2.5rem;
+    text-align: center;
 }
 
 .proj-img {
@@ -216,10 +215,35 @@ h3 {
     max-height: auto;
 }
 
-@media only screen and (max-width: 1000px){
+#big-project {
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+}
+
+.big-proj-description {
+    background-color: var(--quaternary-color);
+    border-radius: 25px;
+    padding: 20px;
+}
+
+#game-img {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 800px){
     #projects {
         display: block;
         text-align: center;
+        padding: 40px;
     }
     .project {
         margin-bottom: 60px;
@@ -229,9 +253,6 @@ h3 {
     }
 }
 
-p {
-    font-size: 1.5rem;
-}
 
 /*Skills section*/
 
@@ -261,7 +282,7 @@ p {
     }
 }
 
-/*footer*/
+/*Footer*/
 
 footer {
     display: flex;
@@ -274,6 +295,7 @@ footer {
 }
 
 /**//**//**//**/
+
 /*contact page*/
 
 #contactlist {
