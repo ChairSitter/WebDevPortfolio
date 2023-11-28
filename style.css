@@ -5,6 +5,13 @@
 }
 */
 
+:root {
+    --primary-color: black;
+    --secondary-color: powderblue; 
+    --tertiary-color: rgb(46, 46, 46);
+    --quaternary-color: white;
+}
+
 body {
     min-width: 100%;
     margin: 0;
@@ -16,9 +23,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: linear-gradient(to right, white, white, rgb(46, 46, 46), black);
-    border-bottom: solid black 20px;
-    border-top: solid black 20px;
+    background-image: linear-gradient(to right, var(--quaternary-color), var(--quaternary-color), var(--tertiary-color), var(--primary-color));
+    border-bottom: solid var(--primary-color) 20px;
+    border-top: solid var(--primary-color) 20px;
 }
 
 h1 {
@@ -48,7 +55,7 @@ nav {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2rem;
     text-transform: uppercase;
-    color: white;
+    color: var(--quaternary-color);
     margin: 15px;
 }
 
@@ -66,7 +73,7 @@ nav {
         background-image: none;
     }
     .button {
-        color: black;
+        color: var(--primary-color);
     }
     #logo {
         display: none;
@@ -92,7 +99,7 @@ a {
 }
 
 a.active {
-    color: black;
+    color: var(--primary-color);
 }
 
 /*main section*/
@@ -238,8 +245,8 @@ footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: black;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--quaternary-color);
     min-height: 40px;
     margin-top: 50px;
 }
@@ -262,5 +269,11 @@ footer {
     #contactlist {
         display: block;
         text-align: center;
+        border: 5px var(--primary-color) solid;
+    }
+    h3 {
+        text-align: center;
+        padding: 0;
+        margin: 20px 0 0 0;
     }
 }
